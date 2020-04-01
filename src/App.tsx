@@ -19,7 +19,7 @@ import FilledInput from '@material-ui/core/FilledInput';
 import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import grey from '@material-ui/core/colors/grey';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -36,6 +36,7 @@ import /*SvgIcon,*/ { SvgIconProps } from '@material-ui/core/SvgIcon';
 import './App.scss';
 import { useMediaQuery } from '@material-ui/core';
 
+/*
 import logo2 from './assets/nodalview-CesaretBrutus-businesscard.png'
 import logo4 from './assets/nodalview-nexthome-bussiness-card.png'
 import logo6 from './assets/nodalview-trevi-group.png'
@@ -56,20 +57,20 @@ import logo12 from './assets/nodalview-imro-businesscard.png'
 
 
 import logo5 from './assets/nodalview-ocbo-businesscard-logo.png'
-
+*/
 
 import lg1 from './assets/md/treviGroup.png'
 import lg2 from './assets/md/capiFrance.png'
 import lg3 from './assets/md/cesarBrutus.png'
 import lg4 from './assets/md/citisoftware.png'
 import lg5 from './assets/md/coldwellBanker.png'
-import lg6 from './assets/md/imro.png'
-import lg7 from './assets/md/lodsTransaction.png'
+//import lg6 from './assets/md/imro.png'
+//import lg7 from './assets/md/lodsTransaction.png'
 import lg8 from './assets/md/nextHome.png'
-import lg9 from './assets/md/ocestBeau.png'
-import lg10 from './assets/md/riani.png'
-import lg11 from './assets/md/sequoia.png'
-import lg12 from './assets/md/solvimo.png'
+//import lg9 from './assets/md/ocestBeau.png'
+//import lg10 from './assets/md/riani.png'
+//import lg11 from './assets/md/sequoia.png'
+//import lg12 from './assets/md/solvimo.png'
 
 
 
