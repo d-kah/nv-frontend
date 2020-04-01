@@ -798,7 +798,7 @@ function App() {
                 12.000
               </h2>
               <p className={classes.BigNumberSubText}>
-                Customer photos each day are turned into extraordinary experiences with Nodalview intelligent cloud and equipment
+                Customer photos are turned into extraordinary experiences each day with Nodalview intelligent cloud and equipment
               </p>
             </Box>
 
