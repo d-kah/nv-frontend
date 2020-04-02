@@ -59,6 +59,7 @@ import logo12 from './assets/nodalview-imro-businesscard.png'
 import logo5 from './assets/nodalview-ocbo-businesscard-logo.png'
 */
 
+import camera from './assets/nodalview.jpg'
 import lg1 from './assets/md/treviGroup.png'
 import lg2 from './assets/md/capiFrance.png'
 import lg3 from './assets/md/cesarBrutus.png'
@@ -201,20 +202,37 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(3, 6), // `${theme.spacing(2)}px ${theme.spacing(6)}px`
       height: theme.spacing(11),
       width: '100%',
+      zIndex: theme.zIndex.mobileStepper - 1, // put smartphoneTripodImg on mobile underneath
 
       [theme.breakpoints.up('md')]: {
         marginLeft: theme.spacing(1),
         width: 'auto'
       }
     },
-    playVideoImage: {
+    imgSmartphoneTripod: {
+      position: 'absolute',
+      zIndex: 0,
+      minWidth: '15vw',
+      height: 'auto',
+      top: '10vh',
+      [theme.breakpoints.up('md')]: {
+        position: 'absolute',
+        top: '20vh',
+
+      }
+    },
+    playVideoImage: { // change this
       cursor: 'pointer',
-      height: '100%',
+      //height: 'calc(100vh - 64px)',
       width: '100%',
-      minHeight: '30vh',
+      //minHeight: '30vh',
+      //display: 'flex',
+      //justifyContent: 'center',
+      //alignItems: 'center',
+      position: 'relative',
       display: 'flex',
       justifyContent: 'center',
-      alignItems: 'center',
+      minHeight: '90vh',
 
       '&:hover $btnCirclePlayVideo': {
         transform: 'scale(1.1)',
@@ -226,6 +244,7 @@ const useStyles = makeStyles((theme: Theme) =>
       left: 'auto',
       //marginLeft: '20%', 
       //marginTop: '20%', 
+      alignSelf: 'center',
 
       background: '#000',
       borderRadius: '100%',
@@ -257,13 +276,15 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom: 8,
     },
     introFlexbox: {
-      height: 'calc(100vh - 64px)',
+      //height: 'calc(100vh - 64px)',
       display: 'flex',
+      flexDirection: 'column',
       [theme.breakpoints.down('sm')]: {
-        flexDirection: 'column'
+        //flexDirection: 'column'
       },
-      [theme.breakpoints.up('sm')]: {
-        alignItems: 'center'
+      [theme.breakpoints.up('md')]: {
+        //alignItems: 'center',
+        justifyContent: 'center'
       }
     },
     logosWrapper: {
@@ -320,6 +341,7 @@ const useStyles = makeStyles((theme: Theme) =>
       backgroundImage: 'linear-gradient(90deg,red,#ff3e98 50%,#6a1180)'
     },
     gridItemCard: {
+      zIndex: theme.zIndex.mobileStepper - 1,
       padding: theme.spacing(1),
       paddingBottom: theme.spacing(3),
 
@@ -400,7 +422,11 @@ const useStyles = makeStyles((theme: Theme) =>
         alignItems: 'center',
       }
     },
-
+    gridContainerIntro: {
+      [theme.breakpoints.up('md')]: {
+        height: 'calc(100vh - 64px)'
+      }
+    },
 
 
 
@@ -517,46 +543,46 @@ function App() {
         }
         <section>
           <Container>
-            <Box display="flex" className={classes.introFlexbox} >
-              <Grid container >
-                <Grid item xs={12} md={6}>
 
-                  <Alert className={classes.alert} icon={<Hidden smDown><Chip classes={{ root: classes.chipTest, label: classes.chipLabel }} label="NEW" color="secondary" /></Hidden>} >We're stepping up to help during this unprecedented time. *COVID-19 CUSTOMER CARE PROGRAM*</Alert>
+            <Grid container className={classes.gridContainerIntro}>
+              <Grid item xs={12} md={6} className={classes.introFlexbox}>
 
-                  <Typography variant="h2" classes={{ root: classes.sectionTitle }}>
-                    Nodalview turns <span style={{ whiteSpace: 'nowrap' }}>real estate</span> viewings into <span className={`textGradient ${classes.textGradient}`} style={{}}>extraordinary experiences</span>
-                  </Typography>
+                <Alert className={classes.alert} icon={<Hidden smDown><Chip classes={{ root: classes.chipTest, label: classes.chipLabel }} label="NEW" color="secondary" /></Hidden>} >We're stepping up to help during this unprecedented time. *COVID-19 CUSTOMER CARE PROGRAM*</Alert>
+
+                <Typography variant="h2" classes={{ root: classes.sectionTitle }}>
+                  Nodalview turns <span style={{ whiteSpace: 'nowrap' }}>real estate</span> viewings into <span className={`textGradient ${classes.textGradient}`} style={{}}>extraordinary experiences</span>
+                </Typography>
 
 
-                  {/*className={classes.introSignUp}*/}
-                  <Box className={classes.signUpWrapper}>
+                {/*className={classes.introSignUp}*/}
+                <Box className={classes.signUpWrapper}>
 
-                    <FormControl fullWidth variant="filled" >
-                      <InputLabel htmlFor="component-filled" color="secondary" classes={{ root: classes.textFieldLabel }}>Email</InputLabel>
-                      <FilledInput id="component-filled" color="secondary" classes={{ root: classes.inputEmail }} />
-                    </FormControl>
+                  <FormControl fullWidth variant="filled" >
+                    <InputLabel htmlFor="component-filled" color="secondary" classes={{ root: classes.textFieldLabel }}>Email</InputLabel>
+                    <FilledInput id="component-filled" color="secondary" classes={{ root: classes.inputEmail }} />
+                  </FormControl>
 
-                    <Button variant="contained" classes={{ root: classes.btnSignUp }}>
-                      Sign Up Free
+                  <Button variant="contained" classes={{ root: classes.btnSignUp }}>
+                    Sign Up Free
                     </Button>
+                </Box>
 
-                  </Box>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  Check goPro social media icons reactions
-                  <div className={classes.playVideoImage}>
-                    <div className={classes.btnCirclePlayVideo}>
-                      <span>
-                        <Hidden smDown>
-                          <PlayIcon width={42} height={42} className={classes.playIcon} />
-                        </Hidden>
-                  Play video
-                </span>
-                    </div>
-                  </div>
-                </Grid>
               </Grid>
-            </Box>
+              <Grid item xs={12} md={6} className={classes.playVideoImage}>
+                <img src={camera} alt="smartphoneTripod" className={classes.imgSmartphoneTripod} />
+
+                <div className={classes.btnCirclePlayVideo}>
+                  <span>
+                    <Hidden smDown>
+                      <PlayIcon width={42} height={42} className={classes.playIcon} />
+                    </Hidden>
+                        Play video
+                      </span>
+                </div>
+
+              </Grid>
+            </Grid>
+
           </Container>
         </section>
 
@@ -707,7 +733,7 @@ function App() {
           <Container className={classes.sectionContainer}>
             <Grid container style={{ minHeight: 400 }}>
               <Grid item xs={12} sm={6}>
-                <h2 className={classes.sectionTitle}>Step up your <span style={{ whiteSpace: 'nowrap' }} className={`textGradient ${classes.textGradient}`}>Click<Hidden xsDown>-Through</Hidden>-Rate</span></h2>
+                <h2 className={classes.sectionTitle}>Generate a much higher <span style={{ whiteSpace: 'nowrap' }} className={`textGradient ${classes.textGradient}`}>Click<Hidden xsDown>-Through</Hidden>-Rate</span></h2>
 
                 <Button color="secondary" style={{ fontSize: '1rem' }}>
                   See How
@@ -798,7 +824,7 @@ function App() {
                 12.000
               </h2>
               <p className={classes.BigNumberSubText}>
-                Customer photos are turned into extraordinary experiences each day with Nodalview intelligent cloud and equipment
+                Customer photos are turned into extraordinary experiences each day with Nodalview intelligent cloud
               </p>
             </Box>
 
