@@ -110,24 +110,24 @@ export default function Topbar(props: any) {
             <span style={{ fontWeight: 500 }}>Nodalview</span>
           </Typography>
 
-{
-  /*
-<Hidden smDown>
-            <Typography className={classes.sectionDesktopLinks}>
-              <Link href="#" onClick={props.toggleDrawer('left', true)} color="inherit" className={classes.topbarLinks}>
-                Solutions
-              </Link>
-              <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
-                Link 2
-              </Link>
-              <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
-                Link 3
-            </Link>
-            </Typography>
-          </Hidden>
-  */
-}
-          
+          {
+            /*
+          <Hidden smDown>
+                      <Typography className={classes.sectionDesktopLinks}>
+                        <Link href="#" onClick={props.toggleDrawer('left', true)} color="inherit" className={classes.topbarLinks}>
+                          Solutions
+                        </Link>
+                        <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
+                          Link 2
+                        </Link>
+                        <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
+                          Link 3
+                      </Link>
+                      </Typography>
+                    </Hidden>
+            */
+          }
+
 
 
           <div className={classes.grow} />
@@ -203,7 +203,7 @@ export default function Topbar(props: any) {
             */
           }
 
-          
+
 
 
           {
@@ -212,9 +212,8 @@ export default function Topbar(props: any) {
             //
           }
 
-          {
-            /*
-            <Hidden mdUp>
+
+          <Hidden mdUp>
             <IconButton
               edge="end"
               color="inherit"
@@ -223,10 +222,9 @@ export default function Topbar(props: any) {
               <MenuIcon />
             </IconButton>
           </Hidden>
-            */
-          }
 
-          
+
+
 
 
           {
@@ -234,10 +232,7 @@ export default function Topbar(props: any) {
             // Get started Button - Desktop only
             //
           }
-
-          {
-            /*
-            <Hidden smDown>
+          <Hidden smDown>
             <Box m={1} />
             <Button
               variant="contained"
@@ -246,10 +241,9 @@ export default function Topbar(props: any) {
               Get Started
             </Button>
           </Hidden>
-            */
-          }
 
-          
+
+
 
 
 
