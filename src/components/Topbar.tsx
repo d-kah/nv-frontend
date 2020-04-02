@@ -106,8 +106,8 @@ export default function Topbar(props: any) {
     <AppBar position="fixed" className={classes.appBar} color="inherit">
       <Container>
         <Toolbar disableGutters>
-          <Typography variant="h5" noWrap color='secondary'>
-            <span style={{fontWeight: 500, lineHeight: '56px'}}>Nodalview</span>
+          <Typography variant="h5" noWrap color='secondary' style={{ lineHeight: '56px', minHeight: '56px'}}>
+            <span style={{fontWeight: 500}}>Nodalview</span>
           </Typography>
 
           <Hidden smDown>
