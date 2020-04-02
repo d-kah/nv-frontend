@@ -212,7 +212,7 @@ const useStyles = makeStyles((theme: Theme) =>
     imgSmartphoneTripod: {
       position: 'absolute',
       zIndex: 0,
-      minWidth: '15vw',
+      //minWidth: '15vw',
       height: 'auto',
       top: '10vh',
       [theme.breakpoints.up('md')]: {
@@ -720,10 +720,6 @@ function App() {
             </Grid>
           </Grid>
         </section>
-
-
-
-
 
 
 
