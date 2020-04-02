@@ -110,23 +110,23 @@ export default function Topbar(props: any) {
             <span style={{ fontWeight: 500 }}>Nodalview</span>
           </Typography>
 
-          {
-            /*
+
+
           <Hidden smDown>
-                      <Typography className={classes.sectionDesktopLinks}>
-                        <Link href="#" onClick={props.toggleDrawer('left', true)} color="inherit" className={classes.topbarLinks}>
-                          Solutions
+            <Typography className={classes.sectionDesktopLinks}>
+              <Link href="#" onClick={props.toggleDrawer()} color="inherit" className={classes.topbarLinks}>
+                Solutions
                         </Link>
-                        <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
-                          Link 2
+              <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
+                Link 2
                         </Link>
-                        <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
-                          Link 3
+              <Link href="#" onClick={preventDefault} color="inherit" className={classes.topbarLinks}>
+                Link 3
                       </Link>
-                      </Typography>
-                    </Hidden>
-            */
-          }
+            </Typography>
+          </Hidden>
+
+          
 
 
 
@@ -138,7 +138,7 @@ export default function Topbar(props: any) {
             //
           }
 
-          
+
           <IconButton
             aria-describedby={webinarPopoverId}
             onClick={handleWebinarClick}
@@ -199,7 +199,7 @@ export default function Topbar(props: any) {
               </ListItem>
             </List>
           </Popover>
-          
+
 
 
 
