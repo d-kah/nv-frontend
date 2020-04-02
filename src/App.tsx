@@ -55,11 +55,22 @@ import logo10 from './assets/nodalview-solvimmo-vitrolles-businesscard.png'
 import logo11 from './assets/nodalview-lodstransaction-business-card-logo.png'
 import logo12 from './assets/nodalview-imro-businesscard.png'
 
-
 import logo5 from './assets/nodalview-ocbo-businesscard-logo.png'
 */
 
-import camera from './assets/nodalview.jpg'
+
+import heart from './assets/emojis/heart.jpg'
+import instagram from './assets/emojis/instagram.jpg'
+import love from './assets/emojis/happyLove.jpg'
+import hands from './assets/emojis/hands.jpg'
+import fbLike from './assets/emojis/fbLike.jpg'
+import fb from './assets/emojis/fb.jpg'
+import clap from './assets/emojis/clap.jpg'
+import amazed from './assets/emojis/amazed.jpg'
+
+
+
+import smartphoneTripod from './assets/smartphoneTripod.jpg'
 import lg1 from './assets/md/treviGroup.png'
 import lg2 from './assets/md/capiFrance.png'
 import lg3 from './assets/md/cesarBrutus.png'
@@ -574,7 +585,7 @@ function App() {
 
               </Grid>
               <Grid item xs={12} md={6} className={classes.playVideoImage}>
-                <img src={camera} alt="smartphoneTripod" className={classes.imgSmartphoneTripod} />
+                <img src={smartphoneTripod} alt="smartphoneTripod" className={classes.imgSmartphoneTripod} />
 
                 <div className={classes.btnCirclePlayVideo}>
                   <span>
@@ -734,10 +745,10 @@ function App() {
           <Container className={classes.sectionContainer}>
             <Grid container style={{ minHeight: 400 }}>
               <Grid item xs={12} sm={6}>
-                <h2 className={classes.sectionTitle}>Generate a much higher <span style={{ whiteSpace: 'nowrap' }} className={`textGradient ${classes.textGradient}`}>Click<Hidden xsDown>-Through</Hidden>-Rate</span></h2>
+                <h2 className={classes.sectionTitle}>Generate a higher <span style={{ whiteSpace: 'nowrap' }} className={`textGradient ${classes.textGradient}`}>Click<Hidden xsDown>-Through</Hidden>-Rate</span></h2>
 
                 <Button color="secondary" style={{ fontSize: '1rem' }}>
-                  See How
+                  See how
                   <span style={{ marginLeft: theme.spacing(1) }}>
                     <ArrowIcon />
                   </span>
@@ -745,7 +756,15 @@ function App() {
 
               </Grid>
               <Grid item xs={12} sm={6}>
-
+                  <p>use emojis to illustrate increased web traffic?</p>
+                  <img  src={heart} alt="logo-riani-immobilier" />
+                  <img  src={clap} alt="logo-riani-immobilier" />
+                  <img  src={fbLike} alt="logo-riani-immobilier" />
+                  <img  src={love} alt="logo-riani-immobilier" />
+                  <img  src={hands} alt="logo-riani-immobilier" />
+                  <img  src={amazed} alt="logo-riani-immobilier" />
+                  <img  src={fb} alt="logo-riani-immobilier" />
+                  <img  src={instagram} alt="logo-riani-immobilier" />
               </Grid>
             </Grid>
           </Container>
@@ -941,11 +960,8 @@ function App() {
 
           </Container>
         </footer>
-
       </main>
-
-
-    </div >
+    </div>
   );
 }
 

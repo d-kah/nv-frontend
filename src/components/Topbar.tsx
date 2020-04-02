@@ -106,7 +106,7 @@ export default function Topbar(props: any) {
     <AppBar position="fixed" className={classes.appBar} color="inherit">
       <Container>
         <Toolbar disableGutters>
-          <Typography variant="h5" noWrap color='secondary' style={{ lineHeight: '56px', minHeight: '56px' }}>
+          <Typography variant="h5" noWrap color='secondary'>
             <span style={{ fontWeight: 500 }}>Nodalview</span>
           </Typography>
 
@@ -126,7 +126,7 @@ export default function Topbar(props: any) {
             </Typography>
           </Hidden>
 
-          
+
 
 
 
@@ -164,11 +164,9 @@ export default function Topbar(props: any) {
           >
             <List aria-label="upcoming webinars">
               <ListItem>
-                <Hidden smDown>
-                  <ListItemIcon>
-                    <CastIcon />
-                  </ListItemIcon>
-                </Hidden>
+                <ListItemIcon>
+                  <CastIcon />
+                </ListItemIcon>
 
                 <ListItemText>
                   Webinar starting in 1d 4h 45m
@@ -176,24 +174,24 @@ export default function Topbar(props: any) {
 
                 <Box m={1} />
 
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" color="secondary" style={{whiteSpace: 'nowrap'}}>
                   Sign up
                 </Button>
               </ListItem>
               <Divider />
               <ListItem>
-                <Hidden smDown>
-                  <ListItemIcon>
-                    <CastIcon />
-                  </ListItemIcon>
-                </Hidden>
+
+                <ListItemIcon>
+                  <CastIcon />
+                </ListItemIcon>
+
                 <ListItemText>
                   Webinar starting in 4d 17h 59m
                 </ListItemText>
 
                 <Box m={1} />
 
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" color="secondary" style={{whiteSpace: 'nowrap'}}>
                   Sign up
               </Button>
               </ListItem>
