@@ -138,9 +138,8 @@ export default function Topbar(props: any) {
             //
           }
 
-          {
-            /*
-<IconButton
+          
+          <IconButton
             aria-describedby={webinarPopoverId}
             onClick={handleWebinarClick}
             color="inherit"
@@ -200,8 +199,7 @@ export default function Topbar(props: any) {
               </ListItem>
             </List>
           </Popover>
-            */
-          }
+          
 
 
 
