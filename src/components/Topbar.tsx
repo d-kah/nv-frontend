@@ -110,7 +110,9 @@ export default function Topbar(props: any) {
             <span style={{ fontWeight: 500 }}>Nodalview</span>
           </Typography>
 
-          <Hidden smDown>
+{
+  /*
+<Hidden smDown>
             <Typography className={classes.sectionDesktopLinks}>
               <Link href="#" onClick={props.toggleDrawer('left', true)} color="inherit" className={classes.topbarLinks}>
                 Solutions
@@ -123,6 +125,9 @@ export default function Topbar(props: any) {
             </Link>
             </Typography>
           </Hidden>
+  */
+}
+          
 
 
           <div className={classes.grow} />
@@ -132,7 +137,10 @@ export default function Topbar(props: any) {
             // Calendar Icon -> Upcoming Webinars Popup
             //
           }
-          <IconButton
+
+          {
+            /*
+<IconButton
             aria-describedby={webinarPopoverId}
             onClick={handleWebinarClick}
             color="inherit"
@@ -192,6 +200,10 @@ export default function Topbar(props: any) {
               </ListItem>
             </List>
           </Popover>
+            */
+          }
+
+          
 
 
           {
@@ -199,7 +211,10 @@ export default function Topbar(props: any) {
             // Hamburger Icon - Mobile only
             //
           }
-          <Hidden mdUp>
+
+          {
+            /*
+            <Hidden mdUp>
             <IconButton
               edge="end"
               color="inherit"
@@ -208,6 +223,10 @@ export default function Topbar(props: any) {
               <MenuIcon />
             </IconButton>
           </Hidden>
+            */
+          }
+
+          
 
 
           {
@@ -215,7 +234,10 @@ export default function Topbar(props: any) {
             // Get started Button - Desktop only
             //
           }
-          <Hidden smDown>
+
+          {
+            /*
+            <Hidden smDown>
             <Box m={1} />
             <Button
               variant="contained"
@@ -224,6 +246,10 @@ export default function Topbar(props: any) {
               Get Started
             </Button>
           </Hidden>
+            */
+          }
+
+          
 
 
 

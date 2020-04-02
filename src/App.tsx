@@ -427,6 +427,11 @@ const useStyles = makeStyles((theme: Theme) =>
         height: 'calc(100vh - 64px)'
       }
     },
+    recommendationWrapper: {
+      [theme.breakpoints.up('md')]: {
+        marginBottom: 'calc(10vw + 20px)'
+      }
+    },
 
 
 
@@ -520,7 +525,7 @@ function App() {
   return (
     <div className="App">
 
-      <Topbar toggleDrawer={toggleDrawer}  />
+      <Topbar toggleDrawer={toggleDrawer} />
 
       <Drawer
         anchor={anchor}
@@ -830,11 +835,13 @@ function App() {
 
         <section style={{ background: '#f2f2f2' }}>
           <Container className={classes.sectionContainer}>
-            <Box p={6}>
+            <div className={classes.recommendationWrapper}>
               <Typography variant="h2" className={classes.sectionTitle} >
                 "Nodalview recommendation quote"
               </Typography>
-            </Box>
+            </div>
+
+
 
             <div className={classes.flexSmUp}>
               <Hidden mdDown>
