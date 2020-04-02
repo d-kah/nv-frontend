@@ -107,7 +107,7 @@ export default function Topbar(props: any) {
       <Container>
         <Toolbar disableGutters>
           <Typography variant="h5" noWrap color='secondary'>
-            <span style={{fontWeight: 500}}>Nodalview</span>
+            <span style={{fontWeight: 500, lineHeight: '56px'}}>Nodalview</span>
           </Typography>
 
           <Hidden smDown>

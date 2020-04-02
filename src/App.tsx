@@ -520,7 +520,7 @@ function App() {
   return (
     <div className="App">
 
-      <Topbar toggleDrawer={toggleDrawer} />
+      <Topbar toggleDrawer={toggleDrawer}  />
 
       <Drawer
         anchor={anchor}
@@ -817,7 +817,7 @@ function App() {
           <Container className={classes.sectionContainer}>
             <Box display="flex" flexDirection="column" justifyContent="center" alignContent="center" >
               <h2 className={classes.BigNumber}>
-                12.000
+                <span className={`textGradient ${classes.textGradient}`}>12.000</span>
               </h2>
               <p className={classes.BigNumberSubText}>
                 Customer photos are turned into extraordinary experiences each day with Nodalview intelligent cloud
