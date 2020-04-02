@@ -70,13 +70,13 @@ const useStyles = makeStyles((theme: Theme) =>
         transform: 'translateX(0)',
         opacity: 1
       }
-      
+
     }
 
   })
 );
 
- 
+
 
 
 export default function Topbar(props: any) {
@@ -106,8 +106,8 @@ export default function Topbar(props: any) {
     <AppBar position="fixed" className={classes.appBar} color="inherit">
       <Container>
         <Toolbar disableGutters>
-          <Typography variant="h5" noWrap color='secondary' style={{ lineHeight: '56px', minHeight: '56px'}}>
-            <span style={{fontWeight: 500}}>Nodalview</span>
+          <Typography variant="h5" noWrap color='secondary' style={{ lineHeight: '56px', minHeight: '56px' }}>
+            <span style={{ fontWeight: 500 }}>Nodalview</span>
           </Typography>
 
           <Hidden smDown>
@@ -157,9 +157,12 @@ export default function Topbar(props: any) {
           >
             <List aria-label="upcoming webinars">
               <ListItem>
-                <ListItemIcon>
-                  <CastIcon />
-                </ListItemIcon>
+                <Hidden smDown>
+                  <ListItemIcon>
+                    <CastIcon />
+                  </ListItemIcon>
+                </Hidden>
+
                 <ListItemText>
                   Webinar starting in 1d 4h 45m
                 </ListItemText>
@@ -168,13 +171,15 @@ export default function Topbar(props: any) {
 
                 <Button variant="contained" color="secondary">
                   Sign up
-              </Button>
+                </Button>
               </ListItem>
               <Divider />
               <ListItem>
-                <ListItemIcon>
-                  <CastIcon />
-                </ListItemIcon>
+                <Hidden smDown>
+                  <ListItemIcon>
+                    <CastIcon />
+                  </ListItemIcon>
+                </Hidden>
                 <ListItemText>
                   Webinar starting in 4d 17h 59m
                 </ListItemText>
@@ -198,7 +203,7 @@ export default function Topbar(props: any) {
             <IconButton
               edge="end"
               color="inherit"
-              onClick={props.toggleDrawer('top', true)}
+              onClick={props.toggleDrawer()}
             >
               <MenuIcon />
             </IconButton>
